@@ -1,0 +1,214 @@
+/* Root container */
+.container {
+  min-height: 100vh;
+  background-color: #8ba848;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  transition: all 0.5s;
+}
+
+/* Header */
+.header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+  background-color: #ff914d;
+  border-radius: 0.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  color: white;
+  font-weight: bold;
+}
+
+.header-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+/* Main container */
+.main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card-wrapper {
+  width: 100%;
+  max-width: 72rem;
+  background-color: white;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  min-height: 600px;
+}
+
+/* Left side - Image */
+.image-section {
+  display: none;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.7s;
+}
+
+/* Right side - Form */
+.form-section {
+  width: 100%;
+  background-color: #3e5623;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.form-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Input styles */
+.input {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background-color: #d9d9d9;
+  color: #1f2937;
+  border: none;
+  outline: none;
+}
+
+.input:focus {
+  outline: 2px solid #fb923c;
+  outline-offset: 2px;
+}
+
+/* Select styles */
+.select-wrapper {
+  position: relative;
+  width: 50%;
+  min-width: 140px;
+}
+
+.select {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background-color: #d9d9d9;
+  color: #1f2937;
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: 2px solid #fb923c;
+  outline-offset: 2px;
+}
+
+.select-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  color: #4b5563;
+}
+
+/* Button */
+.submit-button {
+  margin-top: 1rem;
+  padding: 0.625rem 3rem;
+  background-color: #d9d9d9;
+  color: #3e5623;
+  font-weight: bold;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit-button:hover {
+  background-color: white;
+  transform: scale(1.05);
+}
+
+/* Toggle text */
+.toggle-text {
+  margin-top: 2.5rem;
+  font-size: 0.875rem;
+}
+
+.toggle-button {
+  font-weight: bold;
+  border-bottom: 1px solid transparent;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s;
+}
+
+.toggle-button:hover {
+  border-bottom-color: white;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .main {
+    padding: 2.5rem;
+  }
+
+  .image-section {
+    display: block;
+  }
+
+  .form-section {
+    width: 50%;
+    padding: 4rem;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+}
