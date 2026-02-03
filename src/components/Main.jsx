@@ -1,10 +1,14 @@
 import React, { useContext } from 'react'
 import { FormDataContext } from '../context/FormContext'
+import Header from '../components/Header';
+
 
 const Main = () => {
     const [isLogin, setIsLogin, handleChange, handleSubmit] = useContext(FormDataContext);
   return (
-      <main className="lg:w-2/3 sm:w-full min-h-1/3 lg:flex items-center justify-center p-4 md:p-10">
+      <div className="min-h-screen bg-[#8ba848] font-sans transition-all duration-500 sm:p-5 relative flex flex-col justify-center items-center">
+         <Header/>
+        <main className="lg:w-2/3 sm:w-full min-h-1/3 lg:flex items-center justify-center p-4 md:p-10 ">
         <div className="w-full max-w-6xl bg-white rounded-[40px] overflow-hidden flex shadow-2xl min-h-150">
           
           {/* Left Side: Landscape Image */}
@@ -92,6 +96,8 @@ const Main = () => {
           </div>
         </div>
       </main>
+      </div>
+
   )
 }
 
